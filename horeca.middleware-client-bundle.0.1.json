@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "horeca/middleware-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Horeca\\MiddlewareClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "HORECA_BASE_URL": "",
+                    "HORECA_API_KEY": "/path/to/cert.pem",
+                    "HORECA_SHARED_KEY": "/path/to/cert.key"
+                }
+            },
+            "files": {
+                "config/packages/horeca_middleware_client.yaml": {
+                    "contents": [
+                        "horeca_middleware_client:",
+                        "    test_1: true",
+                        "    test_2: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7405f3af1312d1f9121afed4dddef636c6c7ff00"
+        }
+    }
+}
